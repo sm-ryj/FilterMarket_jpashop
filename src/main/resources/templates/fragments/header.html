@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrinkto-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-
+ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="/css/jumbotron-narrow.css" rel="stylesheet">
+    <title>Filter Market</title>
+</head>
+</html>
+
+
+<!--
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      lang="en">
+&lt;!&ndash; css, js 임시 연결&ndash;&gt;
+<link rel="stylesheet" type="text/css" href="../../static/css/main/header.css">
+<script src="../../static/js/main/header.js"></script>
+<header th:fragment="main_headerFragment">
+    <div class="top_menuArea">
+        <div class="top_menu">
+            <div class="top_list">
+                <a sec:authorize="isAnonymous()" href="/main/login" class="top_list_first">로그인</a>
+                <a sec:authorize="isAuthenticated()" href="#" class="top_list_first" id="logoutBtn">로그아웃</a>
+                <form th:action="@{/logout}" method="post" id="logoutForm"></form>
+                <a sec:authorize="isAnonymous()" href="/main/register" class="arrow_box_wrapper">
+                    회원가입
+                    <div class="arrow_box_wrap">
+                        <div class="arrow_box">
+                            + 2000 P
+                        </div>
+                    </div>
+                </a>
+                <a sec:authorize="isAuthenticated()" href="/main/profile">정보수정</a>
+                <a href="basket.html">장바구니</a>
+                <a href="order.html">주문조회</a>
+                <a href="mypage.html">마이페이지</a>
+            </div>
+            <div class="logo_between">
+                <a href="index.html"><img src="../../static/image/etc/logo.png" alt="로고사진"></a>
+            </div>
+            <div class="top_board">
+                <a href="#">포토리뷰</a>
+                <a href="#">고객문의</a>
+                <span class="top_board_drop">
+                        <a href="#">커뮤니티</a>
+                        <ul class="top_board_dropdown">
+                            <li class="tbd_border_bottom"><a href="#">NOTICE</a><i class="fas fa-check"></i></li>
+                            <li class="tbd_border_bottom"><a href="#">Q&A</a><i class="fas fa-check"></i></li>
+                            <li class="tbd_border_bottom"><a href="#">REVIEW</a><i class="fas fa-check"></i></li>
+                            <li><a href="#">EVENT</a><i class="fas fa-check"></i></li>
+                        </ul>
+                    </span>
+                <a href="#">고객센터</a>
+                <a href="#" class="top_sns" onclick="location.href='https://www.facebook.com'"><img src="../../static/image/etc/facebook.png" alt="페이스북"></a>
+                <a href="#" class="top_sns" onclick="location.href='https://www.instagram.com'"><img src="../../static/image/etc/instagram.png" alt="인스타그램"></a>
+                <a href="#" class="top_sns" onclick="location.href='https://www.youtube.com'"><img src="../../static/image/etc/youtube.png" alt="유튜브"></a>
+
+            </div>
+        </div>
+    </div>
+    <div class="top_logoArea">
+        <a href="/main/index"><img src="../../static/image/etc/logo.png" alt="로고사진"></a>
+    </div>
+    <div class="top_categoryArea">
+        <div class="top_category">
+            <div class="menu_cell menu_cell_drop">
+                <i class="fas fa-bars">=</i>
+                &lt;!&ndash; sub category 전부 나오는 드롭다운 메뉴&ndash;&gt;
+                <div class="menu_cell_dropdown">
+                    <div class="menu_cell_dropdown_left menu_cell_dropdown_sub">
+                        <div class="submenu">
+                            <div class="submenu_caption">음료/우유/커피</div>
+                            <ul> &lt;!&ndash; 복붙한 것 수정 필요 &ndash;&gt;
+                                <li><a href="#">음료</a></li>
+                                <li><a href="#">우유</a></li>
+                                <li><a href="#">커피</a></li>
+                            </ul>
+                        </div>
+                        <div class="submenu">
+                            <div class="submenu_caption">수산/축산</div>
+                            <ul>
+                                <li><a href="#">수산</a></li>
+                                <li><a href="#">축산</a></li>
+                            </ul>
+                        </div>
+                        <div class="submenu">
+                            <div class="submenu_caption">베이커리/치즈</div>
+                            <ul>
+                                <li><a href="/main/category/outer/jacket">베이커리</a></li>
+                                <li><a href="/main/category/outer/cardigan">치즈</a></li>
+                            </ul>
+                        </div>
+                        <div class="submenu">
+                            <div class="submenu_caption">간식/과자/떡</div>
+                            <ul>
+                                <li><a href="#">간식</a></li>
+                                <li><a href="#">과자</a></li>
+                                <li><a href="#">떡</a></li>
+                            </ul>
+                        </div>
+                        <div class="submenu">
+                            <div class="submenu_caption">샐러드/간편식</div>
+                            <ul>
+                                <li><a href="#">샐러드</a></li>
+                                <li><a href="#">간편식</a></li>
+                            </ul>
+                        </div>
+                        <div class="submenu">
+                            <div class="submenu_caption">국/반찬</div>
+                            <ul>
+                                <li><a href="#">국</a></li>
+                                <li><a href="#">반찬</a></li>
+                            </ul>
+                        </div>
+
+                        &lt;!&ndash; <div class="submenu">
+                            <div class="submenu_caption">FILTER</div>
+                            <ul>
+                                <li><a href="#">CAP</a></li>
+                                <li><a href="#">SOCKS</a></li>
+                                <li><a href="#">SCARF & MUFFLER</a></li>
+                                <li><a href="#">TIE & HANDKERCHIEF</a></li>
+                                <li><a href="#">JEWELLERY</a></li>
+                                <li><a href="#">BAG</a></li>
+                                <li><a href="#">BELT</a></li>
+                            </ul>
+                        </div>
+                        <div class="submenu">
+                            <div class="submenu_caption">SHOES</div>
+                        </div>
+                        <div class="submenu">
+                            <div class="submenu_caption">SALE</div>
+                        </div> &ndash;&gt;
+
+                    </div>
+                    <div class="menu_cell_dropdown_right menu_cell_dropdown_sub">
+                        <div class="submenu">
+                            <div class="submenu_caption">COMMUNITY</div>
+                            <ul>
+                                <li><a href="#">NOTICE</a></li>
+                                <li><a href="#">Q&A</a></li>
+                                <li><a href="#">REVIEW</a></li>
+                                <li><a href="#">EVENT</a></li>
+                            </ul>
+                        </div>
+                        <div class="submenu">
+                            <div class="submenu_caption">ABOUT US</div>
+                            <ul>
+                                <li><a href="#">OUR COMPANY</a></li>
+                                <li><a href="#">AGREEMENT</a></li>
+                                <li><a href="#">PRIVACYPOLICY</a></li>
+                                <li><a href="#">SHOPGUIDE</a></li>
+                            </ul>
+                        </div>
+                        <div class="submenu customer_center">
+                            <div class="submenu_caption">CUSTOMER CENTER</div>
+                            <ul>
+                                <li>010 - 2270 - 6149</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &lt;!&ndash; sub category&ndash;&gt;
+            <div class="menu_cell menu_cell_category">
+                <span><a href="#">음료/우유/커피</a></span>
+                <span><a href="#">수산/축산</a></span>
+                <span class="menu_cell_category_drop">
+                        <a href="/main/category/outer/jacket">베이커리/치즈</a>
+                        <div class="menu_cell_category_dropdown">
+                            <div class="in_category">
+                                <div class="in_category_caption">IN CATEGORY</div>
+                                <ul>
+                                    <li><a href="/main/category/outer/jacket">자켓/점퍼</a></li>
+                                    <li><a href="/main/category/outer/cardigan">가디건</a></li>
+                                    <li><a href="/main/category/outer/coat">코트</a></li>
+                                    <li><a href="/main/category/outer/vest">조끼</a></li>
+                                    <li><a href="/main/category/outer/suit">수트</a></li>
+                                </ul>
+                            </div>
+                            <div class="category_img_box">
+                                <a href="/main/product/15">
+                                    <img src="/image/item/OUTER/jacket/로엘 헤비 후리스 후드집업(2color)/로엘 헤비 후리스 후드집업(2color)0.jpg" alt="카테고리 대표 사진"> &lt;!&ndash; 경로 수정 필요!!!&ndash;&gt;
+                                </a>
+                            </div>
+                        </div>
+                    </span>
+                <span class="menu_cell_category_drop">
+                        <a href="#">간식/과자/떡</a>
+                        <div class="menu_cell_category_dropdown">
+                            <div class="in_category">
+                                <div class="in_category_caption">IN CATEGORY</div>
+                                <ul>
+                                    <li><a href="#">긴팔</a></li>
+                                    <li><a href="#">반팔</a></li>
+                                    <li><a href="#">니트</a></li>
+                                    <li><a href="#">나시</a></li>
+                                    <li><a href="#">7부</a></li>
+                                </ul>
+                            </div>
+                            <div class="category_img_box">
+                                <a href="/main/product/71">
+                                    <img src="/image/item/TOP/knit/라이톤 린넨 라운드 반팔니트(14color)/라이톤 린넨 라운드 반팔니트(14color)1.jpg" alt="카테고리 대표 사진">
+                                </a>
+                            </div>
+                        </div>
+                    </span>
+                <span class="menu_cell_category_drop">
+                        <a href="#">샐러드/간편식</a>
+                        <div class="menu_cell_category_dropdown">
+                            <div class="in_category">
+                                <div class="in_category_caption">IN CATEGORY</div>
+                                <ul>
+                                    <li><a href="#">베이직</a></li>
+                                    <li><a href="#">체크/패턴</a></li>
+                                    <li><a href="#">스트라이프</a></li>
+                                </ul>
+                            </div>
+                            <div class="category_img_box">
+                                <a href="/main/product/65">
+                                    <img src="/image/item/SHIRTS/basic/로아 베이직 솔리드 셔츠(7color)/로아 베이직 솔리드 셔츠(7color)0.jpg" alt="카테고리 대표 사진">
+                                </a>
+                            </div>
+                        </div>
+                    </span>
+                <span class="menu_cell_category_drop">
+                        <a href="#">국/반찬</a>
+                        <div class="menu_cell_category_dropdown">
+                            <div class="in_category">
+                                <div class="in_category_caption">IN CATEGORY</div>
+                                <ul>
+                                    <li><a href="#">면바지</a></li>
+                                    <li><a href="#">데님</a></li>
+                                    <li><a href="#">슬랙스</a></li>
+                                    <li><a href="#">반바지</a></li>
+                                </ul>
+                            </div>
+                            <div class="category_img_box">
+                                <a href="/main/product/95">
+                                    <img src="/image/item/BOTTOM/cotton/1+1마약 아이스 카고 밴딩반바지(4color)/1+1마약 아이스 카고 밴딩반바지(4color)1.jpg" alt="카테고리 대표 사진">
+                                </a>
+                            </div>
+                        </div>
+                    </span>
+                &lt;!&ndash; 임시 생략 &ndash;&gt;
+                &lt;!&ndash; <span class="menu_cell_category_drop">
+                        <a href="#">ACC</a>
+                        <div class="menu_cell_category_dropdown">
+                            <div class="in_category">
+                                <div class="in_category_caption">IN CATEGORY</div>
+                                <ul>
+                                    <li><a href="#">CAP</a></li>
+                                    <li><a href="#">SOCKS</a></li>
+                                    <li><a href="#">SKARF & MUFFLER</a></li>
+                                    <li><a href="#">TIE & HANDKERCHIEF</a></li>
+                                    <li><a href="#">JEWELLERY</a></li>
+                                    <li><a href="#">BAG</a></li>
+                                    <li><a href="#">BELT</a></li>
+                                </ul>
+                            </div>
+                            <div class="category_img_box">
+                                <a href="#">
+                                    <img src="/image/etc/acc대표이미지.jpg" alt="카테고리 대표 사진">
+                                </a>
+                            </div>
+                        </div>
+                    </span>
+
+                <span><a href="#">SHOES</a></span>
+                <span><a href="#">SALE</a></span> &ndash;&gt;
+            </div>
+            <div class="search_all menu_cell">
+                <i class="fas fa-search"></i>&nbsp;<span>SEARCH</span>
+                <form action="#" method="GET" class="search_form_dropdown">
+                    <div class="search_box"><input type="text" name="search_word"><i class="fas fa-search"></i></div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</header>
+</html>-->

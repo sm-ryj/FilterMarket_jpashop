@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header" />
+<body>
+
+<div class="container">
+  <div th:replace="fragments/bodyHeader :: bodyHeader"/>
+  <form th:action="@{/items/new}" th:object="${form}" method="post">
+
+    <div class="form-group">
+      <label th:for="name">상품명</label>
+      <input type="text" th:field="*{name}" class="form-control"
+             placeholder="이름을 입력하세요">
+    </div>
+
+    <div class="form-group">
+      <label th:for="price">가격</label>
+      <input type="number" th:field="*{price}" class="form-control"
+             placeholder="가격을 입력하세요">
+    </div>
+
+    <div class="form-group">
+      <label th:for="stockQuantity">수량</label>
+      <input type="number" th:field="*{stockQuantity}" class="form-control" placeholder="수량을 입력하세요">
+    </div>
+
+    <div class="form-group">
+      <label th:for="all_ingredient">전성분/원재료명</label>
+      <input type="text" th:field="*{all_ingredient}" class="form-control"
+             placeholder="전성분/원재료명을 입력하세요">
+    </div>
+
+    <!--<div class="form-group">
+      <label th:for="ingre_category">카테고리</label>
+      <input type="text" th:field="*{ingre_category}" class="form-control"
+             placeholder="카테고리를 입력하세요">
+    </div>-->
+
+    <!--<div class="form-group">
+      <label th:for="page">상세 정보 링크</label>
+      <input type="text" th:field="*{page}" class="form-control"
+             placeholder="제품 상세 정보 페이지 링크를 입력하세요">
+    </div>-->
+
+    <!--<div class="form-group">
+      <label th:for="goodImage">상품 이미지</label>
+      <input type="file" th:id="imgFile" accept=".jpg, .png" class="form-control"
+             placeholder="상품 이미지를 등록하세요">
+    </div>-->
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+  <br/>
+  <div th:replace="fragments/footer :: footer" />
+</div> <!-- /container -->
+</body>
+</html>

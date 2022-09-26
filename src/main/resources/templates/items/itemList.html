@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+ <link rel="stylesheet" href="../../static/css/jumbotron-narrow.css">
+</head>
+<body>
+
+<div class="container">
+ <div th:replace="fragments/bodyHeader :: bodyHeader"/>
+
+ <div>
+  <table class="table table-striped">
+      <thead>
+      <tr>
+          <th>#</th>
+          <th>상품명</th>
+          <th>가격</th>
+          <th class="red" th:each="member: ${members}"><a th:text="${member.name}"></a></th>
+          <th></th>
+      </tr>
+      </thead>
+
+
+   <tbody>
+   <tr th:each="item : ${items}"> <!--, member : ${members}-->
+    <td th:text="${item.id}"></td>
+
+    <!--    유기농 완전방사 유정란 (10구)-->
+    <td th:if="${item.name}=='유기농 완전방사 유정란 (10구)'"><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product1.html?_ijt=430mv9omo8hjboqkrqf2oit6jf&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+    <!--    밀키요시그니처요거트-->
+    <td th:if="${item.name}=='[유기농] 밀키요 시그니처 그릭요거트(450g)'"><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product2.html?_ijt=unosv7ebf7b6tek1jelifo3nag&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+    <!--    매뉴팩트커피 디카페인 콜드브루 과테말라 500ml-->
+    <td th:if="${item.name}=='매뉴팩트커피 디카페인 콜드브루 과테말라 500ml'"><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product3.html?_ijt=gbg77d5dunt7iv6gjftv0c9sq7&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+    <!--    [입점특가] 라쿠치나 간편 파스타 3종 (알리오올리오 | 바질페스토 | 올리브토마토)-->
+    <td th:if="${item.name}=='[입점특가] 라쿠치나 간편 파스타 3종 (알리오올리오 | 바질페스토 | 올리브토마토)'" ><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product4.html?_ijt=asrm7vusc9agjgjtvs4c6onfq1&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+    <!--    다짐 새우살(80g)-->
+    <td th:if="${item.name}=='다짐 새우살(80g)'" ><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product5.html?_ijt=o5doluogt751lovnnhfp3hm802&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+    <!--    간장 순살 새우장(800g)-->
+    <td th:if="${item.name}=='간장 순살 새우장(800g)'" ><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product6.html?_ijt=9uj0k4k6sq1ke91h5qvfl5ei5c&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+    <td th:if="${item.name}=='새우멘보샤프라이'" ><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product7.html?_ijt=nvue4uanh0un2ig1vg2oflpikv&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+    <td th:if="${item.name}=='코르마 커리'" ><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product8.html?_ijt=nvue4uanh0un2ig1vg2oflpikv&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+    <td th:if="${item.name}=='오모가리 수제 김치찌개 (500g)'" ><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product9.html?_ijt=nvue4uanh0un2ig1vg2oflpikv&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+    <td th:if="${item.name}=='정직한 오징어 어묵 (210g)'" ><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product10.html?_ijt=nvue4uanh0un2ig1vg2oflpikv&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+    <td th:if="${item.name}=='수제 해바라기씨 두부칩(70g)'" ><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product11.html?_ijt=nvue4uanh0un2ig1vg2oflpikv&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+    <td th:if="${item.name}=='돈시몬 자몽 주스(1L)'" ><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product12.html?_ijt=nvue4uanh0un2ig1vg2oflpikv&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+    <td th:if="${item.name}=='[10개 1세트] 튼튼두유(180ml*10)'" ><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product13.html?_ijt=nvue4uanh0un2ig1vg2oflpikv&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+    <td th:if="${item.name}=='슈퍼막셰 바나나푸딩'" ><a href='http://localhost:63342/jpashop/jpashop.main/templates/items/detail/product14.html?_ijt=nvue4uanh0un2ig1vg2oflpikv&_ij_reload=RELOAD_ON_SAVE' th:text="${item.name}"></a></td>
+
+    <td th:text="${item.price}"></td>
+
+    <td style="color:red" th:each="member: ${members}"> <!--th:text="${item.ingre_category}"-->
+
+     <span th:text="${member.myAllergen1}"
+           th:if="${#strings.contains(item.all_ingredient, member.myAllergen1)} and !${#strings.contains(item.all_ingredient, member.myAllergen2)} and !${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+     <span th:text="' '"
+           th:unless="${#strings.contains(item.all_ingredient, member.myAllergen1)} and !${#strings.contains(item.all_ingredient, member.myAllergen2)} and !${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+
+     <span th:text="${member.myAllergen2}"
+           th:if="!${#strings.contains(item.all_ingredient, member.myAllergen1)} and ${#strings.contains(item.all_ingredient, member.myAllergen2)} and !${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+     <span th:text="' '"
+           th:unless="!${#strings.contains(item.all_ingredient, member.myAllergen1)} and ${#strings.contains(item.all_ingredient, member.myAllergen2)} and !${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+
+     <span th:text="${member.myAllergen3}"
+           th:if="!${#strings.contains(item.all_ingredient, member.myAllergen1)} and !${#strings.contains(item.all_ingredient, member.myAllergen2)} and ${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+     <span th:text="' '"
+           th:unless="!${#strings.contains(item.all_ingredient, member.myAllergen1)} and !${#strings.contains(item.all_ingredient, member.myAllergen2)} and ${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+
+
+     <span th:text="${member.myAllergen1}+' '+${member.myAllergen2}"
+           th:if="${#strings.contains(item.all_ingredient, member.myAllergen1)} and ${#strings.contains(item.all_ingredient, member.myAllergen2)} and !${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+     <span th:text="' '"
+           th:unless="${#strings.contains(item.all_ingredient, member.myAllergen1)} and ${#strings.contains(item.all_ingredient, member.myAllergen2)} and !${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+
+     <span th:text="${member.myAllergen1}+' '+${member.myAllergen3}"
+           th:if="${#strings.contains(item.all_ingredient, member.myAllergen1)} and !${#strings.contains(item.all_ingredient, member.myAllergen2)} and ${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+     <span th:text="' '"
+           th:unless="${#strings.contains(item.all_ingredient, member.myAllergen1)} and !${#strings.contains(item.all_ingredient, member.myAllergen2)} and ${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+
+     <span th:text="${member.myAllergen2}+' '+${member.myAllergen3}"
+           th:if="!${#strings.contains(item.all_ingredient, member.myAllergen1)} and ${#strings.contains(item.all_ingredient, member.myAllergen2)} and ${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+     <span th:text="' '"
+           th:unless="!${#strings.contains(item.all_ingredient, member.myAllergen1)} and ${#strings.contains(item.all_ingredient, member.myAllergen2)} and ${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+
+
+     <span th:text="${member.myAllergen1}+' '+${member.myAllergen2}+' '+${member.myAllergen3}"
+           th:if="${#strings.contains(item.all_ingredient, member.myAllergen1)} and ${#strings.contains(item.all_ingredient, member.myAllergen2)} and ${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+     <span th:text="' '"
+           th:unless="${#strings.contains(item.all_ingredient, member.myAllergen1)} and ${#strings.contains(item.all_ingredient, member.myAllergen2)} and ${#strings.contains(item.all_ingredient, member.myAllergen3)}"></span>
+
+
+    </td>
+
+    <!--<td th:text="${item.page}"></td>-->
+    <!--<td th:text="${item.stockQuantity}"></td>-->
+    <!--<td th:text="${item.all_ingredient}"></td>-->
+
+    <td>
+     <!--  <a href="#" th:href="@{/items/{id}/edit (id=${item.id})}"
+        class="btn btn-primary" role="button">수정</a>-->
+
+     <a href="#" th:href="@{/orders/{id}/buy (id=${item.id})}"
+        class="btn btn-primary" role="button">주문</a>
+    </td>
+   </tr>
+   </tbody>
+  </table>
+ </div>
+ <div th:replace="fragments/footer :: footer"/>
+</div> <!-- /container -->
+</body>
+</html>
